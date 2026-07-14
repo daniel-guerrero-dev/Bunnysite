@@ -51,15 +51,20 @@ async function newRabbit() {
     console.error(error.message);
   }
 }
-//calls the fetch function
-let bunny = await newRabbit();
 
 //Selects the html elements that will take the bunny data
 const bunnyImg = document.querySelector('[data-image="bunny-image"]');
 const bunnyNms = document.querySelector('[data-name="bunny-name"]');
 const bunnyBreed = document.querySelector('[data-breed="bunny-breed"]');
+const bunnyButton = document.querySelector('[data-action="new-bunny"]');
 
-//Changes the bunny data
-bunnyImg.src = bunny.url;
-bunnyNms.innerHTML = bunnyNames[randomInt(24)];
-bunnyBreed.innerHTML = bunny.breed;
+async function renderNewBunny() {
+  const bunny = await newRabbit();
+
+  if (bunny) {
+    bunnyImg.src = bunny.url;
+    bunnyNms.innerHTML = bunnyNames[randomInt(24)];
+    bunnyBreed.innerHTML = bunny.breed;
+  }
+}
+renderNewBunny();

@@ -6,30 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Daily Bunny Generator</title>
     </head>
-    <body class="flex flex-col h-screen box-border">
-        <header class="flex h-10 bg-emerald-300 p-5 items-center">
+    <body
+        class="flex flex-col h-screen box-border font-yuyu text-3xl bg-linear-to-l from-emerald-50 to bg-emerald-200"
+    >
+        <header
+            class="flex h-15 bg-emerald-300 p-5 items-center font-yuyu text-5xl"
+        >
             <h1>Daily Bunny Generator!</h1>
         </header>
         <main class="p-5 flex flex-col justify-center items-center gap-5">
             <div
                 data-name="bunny-name"
-                class="flex justify-center items-center h-10 w-40 bg-amber-300"
+                class="flex justify-center items-center h-10 w-40 bg-lime-200 border-lime-500 border"
             >
                 Name of bunny
             </div>
-            <div>
+            <div class="border-teal-400 border-5 rounded-xl">
                 <img
                     src=""
                     alt="Image of bunny"
                     data-image="bunny-image"
-                    width="500px"
-                    height="500px"
+                    class="size-150 rounded-lg"
                 />
             </div>
-            <div data-breed="bunny-breed">breed</div>
-            <div>Time until next bunny</div>
-            <div>
-                <button>New bunny</button>
+            <div class="flex gap-12 w-150 justify-center">
+                <div
+                    class="flex flex-col border flex-1 justify-center items-center rounded-2xl bg-linear-to-l from-teal-300 to-teal-100 shadow-xl"
+                >
+                    <p>Breed</p>
+                    <p data-breed="bunny-breed"></p>
+                </div>
+                <div
+                    class="flex border flex-1 justify-center items-center rounded-2xl p-1 bg-linear-to-l from-teal-300 to-teal-100 shadow-xl"
+                >
+                    <p>Time until next bunny</p>
+                </div>
+                <div
+                    class="flex border flex-1 justify-center items-center rounded-2xl bg-linear-to-l from-teal-300 to-teal-100 shadow-xl hover:bg-teal-600"
+                >
+                    <button type="button" data-action="new-bunny">
+                        New bunny
+                    </button>
+                </div>
             </div>
         </main>
         <script type="module" src="/src/main.js"></script>
