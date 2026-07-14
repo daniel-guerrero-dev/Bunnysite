@@ -10,13 +10,26 @@
         <header class="flex h-10 bg-emerald-300 p-5 items-center">
             <h1>Daily Bunny Generator!</h1>
         </header>
-        <main class="flex flex-col justify-center items-center">
-            <div>Name of bunny</div>
-            <div>
-                <img src="" alt="Image of bunny" data-image="bunny-image" />
+        <main class="p-5 flex flex-col justify-center items-center gap-5">
+            <div
+                data-name="bunny-name"
+                class="flex justify-center items-center h-10 w-40 bg-amber-300"
+            >
+                Name of bunny
             </div>
             <div>
-                <button id="funny" type="button" class="border">funny</button>
+                <img
+                    src=""
+                    alt="Image of bunny"
+                    data-image="bunny-image"
+                    width="500px"
+                    height="500px"
+                />
+            </div>
+            <div data-breed="bunny-breed">breed</div>
+            <div>Time until next bunny</div>
+            <div>
+                <button>New bunny</button>
             </div>
         </main>
         <script type="module" src="/src/main.js"></script>
