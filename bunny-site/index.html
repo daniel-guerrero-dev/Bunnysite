@@ -6,14 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Daily Bunny Generator</title>
     </head>
-    <body class="flex flex-col h-screen p-5">
-        <header class="flex h-10">
+    <body class="flex flex-col h-screen box-border">
+        <header class="flex h-10 bg-emerald-300 p-5 items-center">
             <h1>Daily Bunny Generator!</h1>
         </header>
         <main class="flex flex-col justify-center items-center">
             <div>Name of bunny</div>
-            <div>Image of bunny</div>
-            <div>2 buttons</div>
+            <div>
+                <img src="" alt="Image of bunny" data-image="bunny-image" />
+            </div>
+            <div>
+                <button id="funny" type="button" class="border">funny</button>
+            </div>
         </main>
         <script type="module" src="/src/main.js"></script>
     </body>
