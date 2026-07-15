@@ -37,7 +37,7 @@ function randomInt(max) {
 
 //Fetches from the rabbit API to give me an url to an image, the breed of the bunny in the image
 async function newRabbit() {
-  const url = `https://corsproxy.io/?url=https://rabbit-api-two.vercel.app/api/random?t=${Date.now()}`;
+  const url = `/api/bunny?t=${Date.now()}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
